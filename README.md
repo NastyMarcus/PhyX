@@ -8,7 +8,7 @@ For more details, please refer to the project page with dataset exploration and 
 [[Project Page](https://phyx-bench.github.io/)] [[Paper](./assets/PhyX_arXiV.pdf)] [[Huggingface Dataset](https://huggingface.co/datasets/Cloudriver/PhyX)]
 
 <p align="center">
-    <img src="assets/PhyX_Logo.png" width="30%"> <br>
+    <img src="assets/PhyX_Logo.png" width="20%"> <br>
 </p>
 
 ## 📖 Outlines
@@ -30,7 +30,7 @@ For more details, please refer to the project page with dataset exploration and 
 
 PhyX is the first large-scale benchmark specifically designed to assess models' ability in physical reasoning through realistic, visually grounded scenarios.
 
-PhyX includes 3,000 meticulously collected multimodal questions, covering 7 reasoning types across 25 sub-domains and 6 core domains: thermodynamics, electromagnetism, mechanics, modern physics, optics, and wave acoustics.
+PhyX includes 3,000 meticulously collected multimodal questions, covering 6 reasoning types across 25 sub-domains and 6 core domains: thermodynamics, electromagnetism, mechanics, modern physics, optics, and wave acoustics.
 
 ![Sample](assets/data_stat.png)
 
