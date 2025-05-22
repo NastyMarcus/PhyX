@@ -1,5 +1,4 @@
 # PhyX: Does Your Model Have the "Wits" for Physical Reasoning?
-
 <h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for the latest update.</h5>
 
 Evaluation code for the paper "[PhyX: Does Your Model Have the "Wits" for Physical Reasoning?](https://huggingface.co/datasets/Cloudriver/PhyX)".
@@ -9,15 +8,15 @@ For more details, please refer to the project page with dataset exploration and 
 [[Project Page](https://phyx-bench.github.io/)] [[Paper](./assets/PhyX_arXiV.pdf)] [[Huggingface Dataset](https://huggingface.co/datasets/Cloudriver/PhyX)]
 
 ## 📖 Outlines
-- [🔔 News]()
-- [📝 About PhyX]()
-- [🏆 Leaderboard]()
-- [🔮 Usage]()
-  - [Data Download]()
-  - [Data Format]()
-  - [Evaluation on PhyX]()
-- [✅ Cite]()
-- [❤️ Contributors]()
+- [PhyX: Does Your Model Have the "Wits" for Physical Reasoning?](#phyx-does-your-model-have-the-wits-for-physical-reasoning)
+  - [📖 Outlines](#-outlines)
+  - [🔔 News](#-news)
+  - [📝 About PhyX](#-about-phyx)
+  - [🏆 Leaderboard](#-leaderboard)
+  - [🔮 Usage](#-usage)
+    - [Evaluation on PhyX](#evaluation-on-phyx)
+  - [✅ Cite](#-cite)
+  - [❤️ Contributors](#️-contributors)
 
 ## 🔔 News
 
@@ -82,7 +81,7 @@ python -u run.py --data PhyX_mini_IMG \
 
 This example shows how to evaluate `GPT4o_20241120` using DeepSeek-V3 as the judge.
 
-#### Details for these parameters:
+Details for these parameters:
 
 - `--data`: The dataset configuration to evaluate, e.g., `PhyX_mini_MC_IMG` for multiple-choice or `PhyX_mini_IMG` for open-ended.
 - `--model`: The model to be evaluated. Please refer to [this link](https://aicarrier.feishu.cn/wiki/Qp7wwSzQ9iK1Y6kNUJVcr6zTnPe?table=tblsdEpLieDoCxtb ) for supported models.
