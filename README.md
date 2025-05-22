@@ -7,6 +7,10 @@ For more details, please refer to the project page with dataset exploration and 
 
 [[Project Page](https://phyx-bench.github.io/)] [[Paper](./assets/PhyX_arXiV.pdf)] [[Huggingface Dataset](https://huggingface.co/datasets/Cloudriver/PhyX)]
 
+<p align="center">
+    <img src="assets/PhyX_Logo.png" width="30%"> <br>
+</p>
+
 ## 📖 Outlines
 - [PhyX: Does Your Model Have the "Wits" for Physical Reasoning?](#phyx-does-your-model-have-the-wits-for-physical-reasoning)
   - [📖 Outlines](#-outlines)
@@ -19,7 +23,7 @@ For more details, please refer to the project page with dataset exploration and 
   - [❤️ Contributors](#️-contributors)
 
 ## 🔔 News
-
+- **[2025.05.21]** 🚀 We release the testmini set of PhyX at [Huggingface](https://huggingface.co/datasets/Cloudriver/PhyX) and the [evaluation code](https://github.com/NastyMarcus/PhyX)!
 
 
 ## 📝 About PhyX
