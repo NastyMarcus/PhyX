@@ -1,10 +1,33 @@
-# PhyX: Are Your Models Adequate for Physical World Reasoning?
+# PhyX: Does Your Model Have the "Wits" for Physical Reasoning?
+
+<h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for the latest update.</h5>
+
+Evaluation code for the paper "[PhyX: Does Your Model Have the "Wits" for Physical Reasoning?](https://huggingface.co/datasets/Cloudriver/PhyX)".
+
+For more details, please refer to the project page with dataset exploration and visualization tools: [https://phyx-bench.github.io/](https://phyx-bench.github.io/).
+
+[[Project Page](https://phyx-bench.github.io/)] [[Paper](./assets/PhyX_arXiV.pdf)] [[Huggingface Dataset](https://huggingface.co/datasets/Cloudriver/PhyX)]
+
+## 📖 Outlines
+- [🔔 News]()
+- [📝 About PhyX]()
+- [🏆 Leaderboard]()
+- [🔮 Usage]()
+  - [Data Download]()
+  - [Data Format]()
+  - [Evaluation on PhyX]()
+- [✅ Cite]()
+- [❤️ Contributors]()
+
+## 🔔 News
+
+
+
+## 📝 About PhyX
 
 PhyX is the first large-scale benchmark specifically designed to assess models' ability in physical reasoning through realistic, visually grounded scenarios.
 
 PhyX includes 3,000 meticulously collected multimodal questions, covering 7 reasoning types across 25 sub-domains and 6 core domains: thermodynamics, electromagnetism, mechanics, modern physics, optics, and wave acoustics.
-
-## Data
 
 ![Sample](assets/data_stat.png)
 
@@ -24,7 +47,12 @@ Data examples:
 
 ![Sample](assets/data_sample.png)
 
-## Evaluation
+## 🏆 Leaderboard
+
+
+## 🔮 Usage
+
+### Evaluation on PhyX
 
 The evaluation code is implemented based on [VLMEvalKit](https://github.com/open-compass/VLMEvalKit ), and we thank the authors for their efforts.
 
@@ -54,7 +82,7 @@ python -u run.py --data PhyX_mini_IMG \
 
 This example shows how to evaluate `GPT4o_20241120` using DeepSeek-V3 as the judge.
 
-### Details for these parameters:
+#### Details for these parameters:
 
 - `--data`: The dataset configuration to evaluate, e.g., `PhyX_mini_MC_IMG` for multiple-choice or `PhyX_mini_IMG` for open-ended.
 - `--model`: The model to be evaluated. Please refer to [this link](https://aicarrier.feishu.cn/wiki/Qp7wwSzQ9iK1Y6kNUJVcr6zTnPe?table=tblsdEpLieDoCxtb ) for supported models.
@@ -63,3 +91,14 @@ This example shows how to evaluate `GPT4o_20241120` using DeepSeek-V3 as the jud
 After running the evaluation, results will be saved in the `outputs` folder.
 
 
+## ✅ Cite
+If you find **PhyX** useful for your your research and applications, please kindly cite using this BibTeX:
+
+```latex
+To be anounced.
+```
+
+## ❤️ Contributors
+> *Hui Shen<sup>1, 2</sup>, Taiqiang Wu<sup>1</sup>, Qi Han<sup>3</sup>, Yunta Hsieh<sup>2</sup>, Jizhou Wang<sup>4</sup>, Yuyue Zhang<sup>3</sup>, Yuxin Cheng<sup>1</sup>, Zijian Hao<sup>3</sup>, Yuansheng Ni<sup>5</sup>, Xin Wang<sup>6</sup>, Zhongwei Wan<sup>6</sup>, Kai Zhang<sup>6</sup>, Wendong Xu<sup>1</sup>, Jing Xiong<sup>1</sup>, Ping Luo<sup>1</sup>, Wenhu Chen<sup>5</sup>, Chaofan Tao<sup>1</sup>, Z. Morley Mao<sup>2</sup>, Ngai Wong<sup>1</sup>.*
+
+> *<sup>1</sup>The University of Hong Kong, <sup>2</sup>University of Michigan, <sup>3</sup>Independent, <sup>4</sup>University of Toronto, <sup>5</sup>University of Waterloo, <sup>6</sup>The Ohio State University.*
