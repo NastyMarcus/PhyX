@@ -1,7 +1,7 @@
 # PhyX: Does Your Model Have the "Wits" for Physical Reasoning?
 <h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for the latest update.</h5>
 
-Evaluation code for the paper "[PhyX: Does Your Model Have the "Wits" for Physical Reasoning?](https://huggingface.co/datasets/Cloudriver/PhyX)".
+Code for the paper "[PhyX: Does Your Model Have the "Wits" for Physical Reasoning?](https://huggingface.co/datasets/Cloudriver/PhyX)".
 
 For more details, please refer to the project page with dataset exploration and visualization tools: [https://phyx-bench.github.io/](https://phyx-bench.github.io/).
 
@@ -23,6 +23,7 @@ For more details, please refer to the project page with dataset exploration and 
   - [❤️ Contributors](#️-contributors)
 
 ## 🔔 News
+- **[2025.05.23]** 🚀 The [arXiv paper](https://arxiv.org/abs/2505.15929) is online!
 - **[2025.05.21]** 🚀 We release the testmini set of PhyX at [Huggingface](https://huggingface.co/datasets/Cloudriver/PhyX) and the [evaluation code](https://github.com/NastyMarcus/PhyX)!
 
 
