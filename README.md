@@ -58,29 +58,28 @@ Data examples:
 
 ### Evaluation on PhyX
 
-The evaluation code is implemented based on [VLMEvalKit](https://github.com/open-compass/VLMEvalKit ), and we thank the authors for their efforts.
+The evaluation code is implemented based on [VLMEvalKit](https://github.com/open-compass/VLMEvalKit), and we thank the authors for their efforts.
 
 Please follow the [official readme](README_vlmeval.md) to create a pip/conda environment.
 
-In this repository, we provide both Multiple-Choice and Open-ended versions of the data in the `LMUData` folder. For additional formats, please visit the [Google Drive link](https://drive.google.com/file/d/1g6amKMcNSEwg5rfQPsryGtcFiaNGkNaH/view?usp=sharing ) to download and extract the files.
+We use DeepSeek-V3 as the LLM-based judger, please set the `SiliconFlow_API_KEY` or `Deepseek_API` to use it.
+The former one would employ the DeepSeek-V3 provied by SiliconFlow and latter one for official severs.
 
-We use DeepSeek-V3 as the LLM-based judger. Please set the `SiliconFlow_API_KEY` to use it, or alternatively, you can perform rule-based judgment.
+Alternatively, you can perform rule-based judgment, which is free.
 
-To evaluate a VLM on PhyX, simply run `run.sh`:
+To evaluate a VLM on PhyX, simply use `run.sh`:
 
 
 ```
-cd VLMEvalKit
-
-export OPENAI_API_KEY=
-export LMUData="./LMUData"
-export SiliconFlow_API_KEY=
+# export LMUData="./LMUData"
+# export SiliconFlow_API_KEY= 
+# export Deepseek_API=
 
 
-# valid_type: STR, LLM
+# valid_type: STR or LLM
 python -u run.py --data PhyX_mini_IMG \
     --model GPT4o_20241120 \
-    --judge deepseek --judge-args '{"valid_type": "LLM"}'
+    --judge deepseek-v3-si --judge-args '{"valid_type": "LLM"}'
 
 ```
 
@@ -91,6 +90,7 @@ Details for these parameters:
 - `--data`: The dataset configuration to evaluate, e.g., `PhyX_mini_MC_IMG` for multiple-choice or `PhyX_mini_IMG` for open-ended.
 - `--model`: The model to be evaluated. Please refer to [this link](https://aicarrier.feishu.cn/wiki/Qp7wwSzQ9iK1Y6kNUJVcr6zTnPe?table=tblsdEpLieDoCxtb ) for supported models.
 - `--valid_type`: Judgment method — `LLM` for LLM-based evaluation or `STR` for rule-based matching.
+-`--judge`: judger,  `deepseek-v3-si` for deepseek-v3 provided by SiliconFlow (set SiliconFlow_API_KEY) while `deepseek-v3` for official (set Deepseek_API). 
 
 After running the evaluation, results will be saved in the `outputs` folder.
 

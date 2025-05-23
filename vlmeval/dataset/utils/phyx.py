@@ -133,14 +133,10 @@ def PhyX_auxeval(model, line):
     gt_answer = str(line['answer'])
     prediction = line['prediction']
 
-    # if "Final Answer:" in prediction:
-        # prediction = prediction.split("Final Answer:")[-1]
-        # print("hit", gt_answer, "*****", prediction)
-
-    # try extract final answer using re
+    # try extract final answer using re rules
     tmp = PhyX_process_line(line)
     if tmp["extracted"] != "SAME as predict":
-        prediction = tmp["extracted"] # rule extracted
+        prediction = tmp["extracted"] 
 
     # judge via LLM
     if gt_answer.strip().lower() == prediction.strip().lower():
@@ -170,20 +166,17 @@ def PhyX_auxeval_MC(model, line):
     gt_answer = str(line['answer'])
     prediction = line['prediction']
 
-    # if "Final Answer:" in prediction:
-        # prediction = prediction.split("Final Answer:")[-1]
-        # print("hit", gt_answer, "*****", prediction)
 
-    # try extract final answer using re
     tmp = PhyX_process_line_MC(line)
     if tmp["extracted"] != "SAME as predict":
         prediction = tmp["extracted"] # rule extracted
 
     # judge via LLM
+    # match at string level
     if gt_answer.strip().lower() == prediction.strip().lower():
         return dict(log="Matched at string level", res=1, extracted=prediction)
     else:
-        # prediction is A/B/C/D, then must unmatch
+        # prediction is A/B/C/D, then labeled as unmatch
         if prediction.strip() in ["A", "B", "C", "D"]:
             return dict(log="Unmatched at string level", res=0, extracted=prediction)
     
@@ -193,7 +186,6 @@ def PhyX_auxeval_MC(model, line):
             log += f'Try {i}: answer and prediction are {gt_answer} and {prediction}, failed to compare.\n'
         else:
             log += 'Compared at semantic level. '
-            # print(res)
             if "1" in res or 1 == res:
                 log += "Semantic equal via LLM."
                 return dict(log=log, res=1, extracted=prediction)
@@ -234,8 +226,6 @@ def PhyX_process_line(line):
     ret['gt'] = answers
     ret['pred'] = line['prediction'].strip()
 
-    # pattern = r'\b(?:correct|answer|option|Correct|Answer|Option)\b[\s\S]*?([A-D])'
-    # pattern = r'\b(?:correct|answer|option|final\s*answer|correct\s*answer)\b[^:：]*[:：]\s*(.*?)(?=\n\n\n|\Z)'
     pattern = r'\b(?:final\s+answer|correct\s+answer)\b[^:：]*[:：]\s*(.*?)(?=\n\n\n|\Z)'
     flags = re.IGNORECASE | re.DOTALL
     match = re.search(pattern, ret['pred'], flags=flags)
@@ -250,7 +240,7 @@ def PhyX_process_line(line):
     else:
         ret["extracted"] = "SAME as predict"
 
-    # 二次判定
+
     if ret['gt'] in ret['pred']:
         ret['match'] = 1
     else:
@@ -289,7 +279,6 @@ def PhyX_process_line_MC(line):
         else:
             ret["extracted"] = "SAME as predict"
 
-    # 规则判定
     if ret['gt'] + ":" in ret['pred'] or ret['gt'] + "**" in ret['pred'] or "**" + ret['gt'] in ret['pred']:
         ret['match'] = 1
     else:

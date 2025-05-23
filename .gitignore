@@ -203,4 +203,4 @@ test.sh
 log.out
 logs/
 logs
-LMUData/*.tsv
+test_api.py
