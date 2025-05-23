@@ -23,7 +23,8 @@ def build_judge(**kwargs):
             'gpt-4o-mini': 'gpt-4o-mini-2024-07-18',
             'qwen-7b': 'Qwen/Qwen2.5-7B-Instruct',
             'qwen-72b': 'Qwen/Qwen2.5-72B-Instruct',
-            'deepseek': 'deepseek-ai/DeepSeek-V3',
+            'deepseek-v3-si': 'deepseek-ai/DeepSeek-V3',
+            'deepseek-v3': 'deepseek-chat', #! official
             'llama31-8b': 'meta-llama/Llama-3.1-8B-Instruct',
         }
         model_version = model_map[model]
@@ -34,10 +35,6 @@ def build_judge(**kwargs):
         model = SiliconFlowAPI(model_version, **kwargs)
     elif model == 'llama31-8b':
         model = HFChatModel(model_version, **kwargs)
-    elif model in ['deepseek-v3']:
-        # Deepseek_API
-        print("TBD")
-        pass
     else:
         model = OpenAIWrapper(model_version, **kwargs)
     return model
