@@ -5,7 +5,7 @@ Evaluation code for the paper "[PhyX: Does Your Model Have the "Wits" for Physic
 
 For more details, please refer to the project page with dataset exploration and visualization tools: [https://phyx-bench.github.io/](https://phyx-bench.github.io/).
 
-[[Project Page](https://phyx-bench.github.io/)] [[Paper](./assets/PhyX_arXiV.pdf)] [[Huggingface Dataset](https://huggingface.co/datasets/Cloudriver/PhyX)]
+[[🌐 Project Page](https://phyx-bench.github.io/)] [[📖 Paper](https://arxiv.org/abs/2505.15929)] [[🤗 Huggingface Dataset](https://huggingface.co/datasets/Cloudriver/PhyX)]
 
 <p align="center">
     <img src="assets/PhyX_Logo.png" width="20%"> <br>
@@ -98,7 +98,15 @@ After running the evaluation, results will be saved in the `outputs` folder.
 If you find **PhyX** useful for your your research and applications, please kindly cite using this BibTeX:
 
 ```latex
-To be anounced.
+@misc{shen2025phyxdoesmodelwits,
+      title={PhyX: Does Your Model Have the "Wits" for Physical Reasoning?}, 
+      author={Hui Shen and Taiqiang Wu and Qi Han and Yunta Hsieh and Jizhou Wang and Yuyue Zhang and Yuxin Cheng and Zijian Hao and Yuansheng Ni and Xin Wang and Zhongwei Wan and Kai Zhang and Wendong Xu and Jing Xiong and Ping Luo and Wenhu Chen and Chaofan Tao and Zhuoqing Mao and Ngai Wong},
+      year={2025},
+      eprint={2505.15929},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2505.15929}, 
+}
 ```
 
 ## ❤️ Contributors
