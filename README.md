@@ -15,7 +15,7 @@
 
 Code for the paper "[PhyX: Does Your Model Have the &#34;Wits&#34; for Physical Reasoning?](https://huggingface.co/datasets/Cloudriver/PhyX)".
 
-For more details, please refer to the project page with **dataset exploration and visualization tools**: [https://phyx-bench.github.io/](https://phyx-bench.github.io/).
+For more details, please refer to the project page with **dataset exploration and visualization tools**: [PhyX Project Page](https://killthefullmoon.github.io/projects/PhyX/index.html).
 
 [[🌐 Project Page](https://killthefullmoon.github.io/projects/PhyX/index.html)] [[📖 Paper](https://arxiv.org/abs/2505.15929)] [[🤗 Huggingface Dataset](https://huggingface.co/datasets/Cloudriver/PhyX)]  [[🌐 Blog (中文)](https://mp.weixin.qq.com/s/okKn6WrWilPmo0_yOcDP3Q)]
 
