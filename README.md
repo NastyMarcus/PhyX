@@ -17,7 +17,7 @@ Code for the paper "[PhyX: Does Your Model Have the &#34;Wits&#34; for Physical 
 
 For more details, please refer to the project page with **dataset exploration and visualization tools**: [https://phyx-bench.github.io/](https://phyx-bench.github.io/).
 
-[[🌐 Project Page](https://phyx-bench.github.io/)] [[📖 Paper](https://arxiv.org/abs/2505.15929)] [[🤗 Huggingface Dataset](https://huggingface.co/datasets/Cloudriver/PhyX)]  [[🌐 Blog (中文)](https://mp.weixin.qq.com/s/okKn6WrWilPmo0_yOcDP3Q)]
+[[🌐 Project Page](https://killthefullmoon.github.io/projects/PhyX/index.html)] [[📖 Paper](https://arxiv.org/abs/2505.15929)] [[🤗 Huggingface Dataset](https://huggingface.co/datasets/Cloudriver/PhyX)]  [[🌐 Blog (中文)](https://mp.weixin.qq.com/s/okKn6WrWilPmo0_yOcDP3Q)]
 
 <p align="center">
     <img src="assets/PhyX_Logo.png" width="20%"> <br>
